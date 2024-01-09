@@ -3,10 +3,7 @@ require "sinatra/reloader"
 require "http"
 
 get("/") do
-  "
-  <h1>Welcome to your Sinatra App!</h1>
-  <p>Define some routes in app.rb</p>
-  "
+    erb(:homepage)
 end
 get("/umbrella") do
   erb(:umbrella_form)
@@ -63,4 +60,13 @@ post("/process_umbrella") do
 end
 
   erb(:umbrella_results)
+end
+
+
+get("/message") do
+  erb(:message_form)
+end
+
+get("/chat") do
+  erb(:chat_form)
 end
